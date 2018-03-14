@@ -15,3 +15,26 @@ class LuckyController
         );
     }
 }
+
+# config/routes.yaml
+
+# the "app_lucky_number" route name is not important yet
+app_lucky_number:
+    path: http://www.ticketduende.com.ve/
+    controller: App\Controller\LuckyController::number
+
+// src/Controller/LuckyController.php
+
+// ...
++ use Symfony\Component\Routing\Annotation\Route;
+
+class LuckyController
+{
++     /**
++      * @Route("http://www.ticketduende.com.ve/")
++      */
+    public function number()
+    {
+        // this looks exactly the same
+    }
+}
