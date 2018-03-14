@@ -15,7 +15,23 @@ app_lucky_number:
     controller: App\Controller\LuckyController::number
 
         return new Response(
-            '<html><body>Lucky number: '.$number.'</body></html>'
+            '<html><body>
+                         // src/Controller/LuckyController.php
+
+// ...
++ use Symfony\Component\Routing\Annotation\Route;
+
+class LuckyController
+{
++     /**
++      * @Route("/lucky/number")
++      */
+    public function number()
+    {
+        // this looks exactly the same
+    }
+}
+             </body></html>'
         );
     }
 }
