@@ -10,10 +10,12 @@ class LuckyController
     {
         $number = mt_rand(0, 100);
 
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
+
         return new Response(
-            '<html><body><h1>Your lucky number is {{ app_lucky_number:
-    path: http://www.ticketduende.com.ve/
-    controller: App\Controller\LuckyController::number }}</h1> </body></html>'
+            '<html><body>Lucky number: '.$number.'</body></html>'
         );
     }
 }
