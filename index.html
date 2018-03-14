@@ -18,19 +18,9 @@ app_lucky_number:
             '<html><body>
 
 $ composer require annotations
-                         // src/Controller/LuckyController.php
-
-// ...
-+ use Symfony\Component\Routing\Annotation\Route;
-
-class LuckyController
-{
-+     /**
-+      * @Route("http://www.ticketduende.com.ve/")
-+      */
-    public function number()
-    {
-        // this looks exactly the same
+                         return $this->render('lucky/number.html.twig', array(
+            'number' => $number,
+        ));
     }
 }
              </body></html>'
