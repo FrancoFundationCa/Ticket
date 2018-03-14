@@ -14,10 +14,15 @@ app_lucky_number:
     path: http://www.ticketduende.com.ve/
     controller: App\Controller\LuckyController::number
 
+ return $this->render('lucky/number.html.twig', array(
+            'number' => $number,
+        ));
+    }
+}
 
       return new Response(
             '<html><body>
-<h1>Your lucky number is {{ $number}}</h1>
+<h1>Your lucky number is {{number}}</h1>
 </body></html>'
         );
     }
