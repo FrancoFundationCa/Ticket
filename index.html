@@ -1,19 +1,7 @@
-<?php
-// src/Controller/LuckyController.php
-namespace App\Controller;
+require __DIR__.'/vendor/autoload.php';
 
-use Symfony\Component\HttpFoundation\Response;
+use Spipu\Html2Pdf\Html2Pdf;
 
-class LuckyController
-{
-    public function number()
-    {
-        $number = mt_rand(0, 100);
-
-      return new Response(
-            '<html><body>
-<h1>Your lucky number is {{number}}</h1>
-</body></html>'
-        );
-    }
-}
+$html2pdf = new Html2Pdf();
+$html2pdf->writeHTML('<h1>HelloWorld</h1>This is my first test');
+$html2pdf->output();
