@@ -1,40 +1,17 @@
-<?php
 // src/Controller/LuckyController.php
-namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
-
-class LuckyController
+// ...
+class LuckyController extends Controller
 {
+    /**
+     * @Route("http://www.ticketduende.com.ve/")
+     */
     public function number()
     {
         $number = mt_rand(0, 100);
 
-        return new Response(
-            '<html><body>Lucky number: '.$number.'</body></html>'
-        );
-    }
-}
-
-# config/routes.yaml
-
-# the "app_lucky_number" route name is not important yet
-app_lucky_number:
-    path: http://www.ticketduende.com.ve/
-    controller: App\Controller\LuckyController::number
-
-// src/Controller/LuckyController.php
-
-// ...
-+ use Symfony\Component\Routing\Annotation\Route;
-
-class LuckyController
-{
-+     /**
-+      * @Route("http://www.ticketduende.com.ve/")
-+      */
-    public function number()
-    {
-        // this looks exactly the same
+        return $this->render('lucky/number.html.twig', array(
+            'number' => $number,
+        ));
     }
 }
