@@ -25,11 +25,8 @@ app_lucky_number:
     path: /lucky/number
     controller: App\Controller\LuckyController::number
 
-        return new Response(
-            '<html><body>
-
-
-             </body></html>'
+      return new Response(
+            '<html><body>Lucky number: '.$number.'</body></html>'
         );
     }
 }
