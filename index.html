@@ -1,17 +1,17 @@
+<?php
 // src/Controller/LuckyController.php
+namespace App\Controller;
 
-// ...
-class LuckyController extends Controller
+use Symfony\Component\HttpFoundation\Response;
+
+class LuckyController
 {
-    /**
-     * @Route("http://www.ticketduende.com.ve/")
-     */
     public function number()
     {
         $number = mt_rand(0, 100);
 
-        return $this->render('lucky/number.html.twig', array(
-            'number' => $number,
-        ));
+        return new Response(
+            '<html><body><h1>Your lucky number is {{ number }}</h1> </body></html>'
+        );
     }
 }
