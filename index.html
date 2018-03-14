@@ -1,7 +1,7 @@
-require __DIR__.'/vendor/autoload.php';
+<?php
 
-use Spipu\Html2Pdf\Html2Pdf;
+use Mpdf\Mpdf;
 
-$html2pdf = new Html2Pdf();
-$html2pdf->writeHTML('<h1>HelloWorld</h1>This is my first test');
-$html2pdf->output();
+require_once __DIR__ . '/vendor/autoload.php';
+
+$mpdf = new Mpdf();
