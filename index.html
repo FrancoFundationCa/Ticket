@@ -84,7 +84,11 @@ function googleTranslateElementInit() {
  
 <head/>
 <Body>
-
+curl https://api.stripe.com/v1/charges \
+   -u sk_test_nke6CaG0Tuy9sCgzYI7bfd7g: \
+   -d amount=1099 \
+   -d currency=eur \
+   -d customer=cus_VWaMywLC4keKS6
 <div class="g-recaptcha" data-sitekey="6LddoksUAAAAAPBDLWiTuJcLmi_0_WC21YVCLMN2"></div>
 <Body/>
 <Footer>
