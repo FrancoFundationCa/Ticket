@@ -44,7 +44,22 @@ body { margin-top:20px; }
 .checkbox.pull-right { margin: 0; }
 .pl-ziro { padding-left: 0px; }
 <script src='https://www.google.com/recaptcha/api.js'></script>
-<!-----lelo------>
+ <script>
+      function disableClick(){
+        document.onclick=function(event){
+          if (event.button == 2) {
+            alert('Right Click Message');
+            return false;
+          }
+        }
+      }
+    </script>
+ <script type="text/javascript">
+        if (typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = { "required": ["jquery-1.8.3.min.js", "museutils.js", "jquery.watch.js", "jquery.scrolleffects.js", "jquery.musepolyfill.bgsize.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "jquery.musemenu.js", "index.css"], "outOfDate": [] };
+    </script>
+<head/>
+<body onLoad="disableClick()">
+  <!-----lelo------>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/curl/0.8.13/curl-for-dojo1.6/curl.js" integrity="sha256-kDusdS/5Kb46qYMcIKZfZqPq6Qv8R+ZgBYQaUE0nhTI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/curl/0.8.13/curl-for-dojo1.6/curl.min.js" integrity="sha256-nXrENtSqnd5VDkY3O+Xlojo3zEvAMDMXfPTMeZfIXJ4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/curl/0.8.13/curl-for-dojo1.8/curl.js" integrity="sha256-loMKIl9zfj3gJtZd6cPNu0chLJDMyVx2CWLQ7MzC9P8=" crossorigin="anonymous"></script>
@@ -84,21 +99,7 @@ body { margin-top:20px; }
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.17/upgrade.min.js" integrity="sha256-qdYefRY5PSmWEqX6ykpThrm6Q68Jl4U7RCOGCug6h04=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.17/web_worker/ui.dev.js" integrity="sha256-5W3TyZmaX872FPn0ltf7pArqMGeCq/1946XZpw0PDjw=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.17/web_worker/worker.dev.js" integrity="sha256-6JLMdqKqAo57a+kcaGjS6Wm1c1EaKI3W9qJxaJYGzR4=" crossorigin="anonymous"></script>
-  <script>
-      function disableClick(){
-        document.onclick=function(event){
-          if (event.button == 2) {
-            alert('Right Click Message');
-            return false;
-          }
-        }
-      }
-    </script>
- <script type="text/javascript">
-        if (typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = { "required": ["jquery-1.8.3.min.js", "museutils.js", "jquery.watch.js", "jquery.scrolleffects.js", "jquery.musepolyfill.bgsize.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "jquery.musemenu.js", "index.css"], "outOfDate": [] };
-    </script>
-<head/>
-<body onLoad="disableClick()">
+ 
 hdhdhdhhddhdhdh  
   <p>hdhdhddh<p/>
 <div class="g-recaptcha" data-sitekey="6LddoksUAAAAAPBDLWiTuJcLmi_0_WC21YVCLMN2"></div>
