@@ -111,23 +111,17 @@ body { margin-top:20px; }
     </script>
 </head>
 <body oncontextmenu="return false">
-var stripe = Stripe('pk_test_YpIFApJ9cw0YRwl3MBeBGEfY');
-var elements = stripe.elements();
-
-var card = elements.create('card');
-card.mount('#card-element');
-
-var promise = stripe.createToken(card);
-promise.then(function(result) {
-  // result.token is the card token.
-});
-  
-  curl https://api.stripe.com/v1/customers \
-   -u sk_test_Bej4DFvlCXtDy9WOnB2b2ro4: \
-   -d source=tok_1CDbqXG8rPquF6Am1l1OnHwA \
-   -d description="David Martinez" \
-   -d email="david.martinez.38@example.com"
-<div class="g-recaptcha" data-sitekey="6LddoksUAAAAAPBDLWiTuJcLmi_0_WC21YVCLMN2"></div>
+<form action="your-server-side-code" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_YpIFApJ9cw0YRwl3MBeBGEfY"
+    data-amount="999"
+    data-name="ticketduende.com.ve"
+    data-description="Example charge"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+</form>
 </Body>
 <Footer>
   <script type='text/javascript'> (function(){ var s1=document.createElement('script'),s0=document.getElementsByTagName('script')[0]; s1.async=true; s1.src='https://floatbot.ai/portal/wbot/index.php?botId=5ac63f8b42d4e2148d0764f9'; s1.charset='UTF-8'; s1.setAttribute('crossorigin','*'); s0.parentNode.insertBefore(s1,s0); })(); </script>
