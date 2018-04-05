@@ -121,6 +121,13 @@ body { margin-top:20px; }
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
     data-locale="auto">
   </script>
+                        curl https://api.stripe.com/v1/charges \
+   -u sk_test_nke6CaG0Tuy9sCgzYI7bfd7g: \
+   -d amount=999 \
+   -d currency=usd \
+   -d description="Example charge" \
+   -d metadata[order_id]=6735 \
+   -d source=tok_fkooXO1nLxsnL42BFASutdtY
 </form>
 </Body>
 <Footer>
