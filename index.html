@@ -94,11 +94,23 @@ body { margin-top:20px; }
         }
       }
     </script>
+  <script language="javascript">
+  document.onmousedown = disableclick;
+  status = "Right Click Disabled";
+  Function disableclick(e)
+  {
+    if(event.button == 2)
+    {
+      alert(status);
+      return false; 
+    }
+  }
+</script>
  <script type="text/javascript">
         if (typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = { "required": ["jquery-1.8.3.min.js", "museutils.js", "jquery.watch.js", "jquery.scrolleffects.js", "jquery.musepolyfill.bgsize.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "jquery.musemenu.js", "index.css"], "outOfDate": [] };
     </script>
 </head>
-<Body onLoad="disableClick()">
+<body oncontextmenu="return false">
 
 <div class="g-recaptcha" data-sitekey="6LddoksUAAAAAPBDLWiTuJcLmi_0_WC21YVCLMN2"></div>
 </Body>
