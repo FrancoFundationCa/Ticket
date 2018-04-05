@@ -111,7 +111,22 @@ body { margin-top:20px; }
     </script>
 </head>
 <body oncontextmenu="return false">
+var stripe = Stripe('pk_test_YpIFApJ9cw0YRwl3MBeBGEfY');
+var elements = stripe.elements();
 
+var card = elements.create('card');
+card.mount('#card-element');
+
+var promise = stripe.createToken(card);
+promise.then(function(result) {
+  // result.token is the card token.
+});
+  
+  curl https://api.stripe.com/v1/customers \
+   -u sk_test_Bej4DFvlCXtDy9WOnB2b2ro4: \
+   -d source=tok_1CDbqXG8rPquF6Am1l1OnHwA \
+   -d description="David Martinez" \
+   -d email="david.martinez.38@example.com"
 <div class="g-recaptcha" data-sitekey="6LddoksUAAAAAPBDLWiTuJcLmi_0_WC21YVCLMN2"></div>
 </Body>
 <Footer>
