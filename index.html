@@ -120,8 +120,8 @@ body { margin-top:20px; }
     data-description="Example charge"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
     data-locale="auto">
-  </script>
-                       # Set your secret key: remember to change this to your live secret key in production
+    
+     # Set your secret key: remember to change this to your live secret key in production
 # See your keys here: https://dashboard.stripe.com/account/apikeys
 stripe.api_key = "sk_test_nke6CaG0Tuy9sCgzYI7bfd7g"
 
@@ -137,6 +137,7 @@ charge = stripe.Charge.create(
   metadata={"order_id": 6735},
   source=token,
 )
+  </script>                     
 </form>
 </Body>
 <Footer>
