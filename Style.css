@@ -8,6 +8,6 @@ div.absolute {
 th {
 class="text-danger"
 }
-th + td {
+th+td {
 class="text-center"
 }
