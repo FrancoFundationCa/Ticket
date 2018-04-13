@@ -5,3 +5,9 @@ div.absolute {
     border: 3px solid #0000;
     padding: 10px;
 }
+th{
+class="text-danger"
+    }
+th + td {
+class="text-center"
+}
